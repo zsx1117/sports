@@ -52,5 +52,8 @@
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.39" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
     <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.7" level="project" />
+    <orderEntry type="module" module-name="login-impl" />
+    <orderEntry type="module" module-name="login-intf" />
+    <orderEntry type="module" module-name="pub" />
   </component>
 </module>

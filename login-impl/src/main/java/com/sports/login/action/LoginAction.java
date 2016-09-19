@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Map;
 
 @Controller
+@RequestMapping("/user")
 public class LoginAction extends BaseController {
 
     @Autowired
@@ -31,5 +32,12 @@ public class LoginAction extends BaseController {
         }else{
             return FAILED;
         }
+    }
+
+    @RequestMapping(value="/test")
+    public
+    @ResponseBody
+    Map<String, ?> test() {
+        return SUCCESS;
     }
 }

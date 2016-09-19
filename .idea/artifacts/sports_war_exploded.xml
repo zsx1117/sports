@@ -5,6 +5,9 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="sports" />
+          <element id="module-output" name="login-impl" />
+          <element id="module-output" name="login-intf" />
+          <element id="module-output" name="pub" />
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.6.RELEASE" />
