@@ -30,7 +30,7 @@
     <bytecodeTargetLevel>
       <module name="login-impl" target="1.8" />
       <module name="login-intf" target="1.8" />
-      <module name="pub" target="1.5" />
+      <module name="pub" target="1.8" />
       <module name="sports" target="1.8" />
     </bytecodeTargetLevel>
   </component>

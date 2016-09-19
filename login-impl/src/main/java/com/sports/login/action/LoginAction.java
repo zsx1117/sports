@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import utils.CollectionUtils;
 
 import java.util.Map;
 
@@ -26,18 +27,19 @@ public class LoginAction extends BaseController {
     @RequestMapping(value="/login",method= RequestMethod.POST)
     public
     @ResponseBody
-    Map<String, ?> login(@RequestParam String loginName,String password){
+    String login(@RequestParam String loginName,String password){
         if(loginName != null && loginName.equals("admin") && password != null && password.equals("123456") ){
-            return SUCCESS;
+            return CollectionUtils.getOutCome(SUCCESS,LOGINSUCCESSMESSAGE,EMPTYRESULT);
         }else{
-            return FAILED;
+            return CollectionUtils.getOutCome(FAILED,LOGINFAILEDMESSAGE,EMPTYRESULT);
         }
     }
 
     @RequestMapping(value="/test")
     public
     @ResponseBody
-    Map<String, ?> test() {
-        return SUCCESS;
+    String test() {
+        String result = CollectionUtils.getOutCome(SUCCESS,LOGINSUCCESSMESSAGE,EMPTYRESULT);
+        return result;
     }
 }

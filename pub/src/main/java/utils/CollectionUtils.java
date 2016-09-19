@@ -95,4 +95,12 @@ public class CollectionUtils {
             return join(objs, seperator);
         }
 
+       public static String getOutCome (Map<String,String> code,Map<String,String> message, Map<String,String> result){
+           Map map = new HashMap<>();
+           map.putAll(code);
+           map.putAll(message);
+           map.putAll(result);
+           return GsonUtils.getInstance().toJson(map);
+       }
+
     }
