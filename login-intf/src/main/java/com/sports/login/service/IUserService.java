@@ -13,4 +13,6 @@ public interface IUserService {
     UserVO findUserByAccount(String loginName);
 
     void updateToken(UserVO user);
+
+    boolean register(UserVO user);
 }

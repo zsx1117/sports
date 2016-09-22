@@ -16,7 +16,8 @@ public class BaseController {
     public static final Map<String,String> LOGINSUCCESSMESSAGE =  Collections.unmodifiableMap(CollectionUtils.makeMap("message","登录成功"));
     public static final Map<String,String> LOGINFAILEDMESSAGE =  Collections.unmodifiableMap(CollectionUtils.makeMap("message","登录失败"));
     public static final Map<String,String> EMPTYRESULT =  Collections.unmodifiableMap(CollectionUtils.makeMap("result",null));
-
+    public static final Map<String,String> OPERATIONFAILEDMESSAGE =  Collections.unmodifiableMap(CollectionUtils.makeMap("message","操作失败"));
+    public static final Map<String,String> OPERATIONSUCCESSMESSAGE =  Collections.unmodifiableMap(CollectionUtils.makeMap("message","操作成功"));
 
 
 }

@@ -25,5 +25,9 @@ public class UserServiceImpl implements com.sports.login.service.IUserService {
     @Override
     public void updateToken(UserVO user){
     }
+    @Override
+    public boolean register(UserVO user){
+        return true;
+    }
 
 }
