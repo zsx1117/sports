@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="SPORTS:war exploded">
-    <output-path>$PROJECT_DIR$/classes/artifacts/SPORTS_war_exploded</output-path>
+    <output-path>$PROJECT_DIR$/target</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="lib">
@@ -26,6 +26,11 @@
           <element id="library" level="project" name="Maven: org.mybatis:mybatis-spring:1.3.0" />
           <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.39" />
+        </element>
+        <element id="directory" name="classes">
+          <element id="module-output" name="login-intf" />
+          <element id="module-output" name="login-impl" />
+          <element id="module-output" name="pub" />
         </element>
       </element>
       <element id="javaee-facet-resources" facet="SPORTS/web/Web" />
