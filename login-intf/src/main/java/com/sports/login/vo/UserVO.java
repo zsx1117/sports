@@ -12,6 +12,8 @@ public class UserVO implements Serializable{
 
     private String loginName;
 
+    private String name;
+
     private String phone;
 
     private AccountVO account;
@@ -79,6 +81,14 @@ public class UserVO implements Serializable{
 
     public void setLoginName(String loginName) {
         this.loginName = loginName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
 }
