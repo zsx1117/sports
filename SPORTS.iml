@@ -51,8 +51,8 @@
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.39" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:servlet-api:2.5" level="project" />
-    <orderEntry type="module" module-name="login-impl" exported="" />
-    <orderEntry type="module" module-name="login-intf" exported="" />
-    <orderEntry type="module" module-name="pub" exported="" />
+    <orderEntry type="module" module-name="login-impl" />
+    <orderEntry type="module" module-name="login-intf" />
+    <orderEntry type="module" module-name="pub" />
   </component>
 </module>
