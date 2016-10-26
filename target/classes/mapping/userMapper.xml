@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sports.Dao.UserDao">
+    <resultMap type="com.sports.pojo.User" id="resultUser">
+        <id column="user_basic_id" property="id" />
+        <result column="user_name"  property="name"/>
+        <result column="user_age"  property="age"/>
+        <result column="user_password"  property="password"/>
+        <result column="user_email"  property="email"/>
+        <result column="user_sex"  property="sex"/>
+        <result column="user_imageURL"  property="imageURL"/>
+        <result column="user_authority"  property="authority"/>
+
+    </resultMap>
+
+    <select id="getUserById" parameterType="int"
+            resultMap="resultUser"
+            resultType="com.sports.pojo.User">
+        select * from user_basic where User_basic_id=#{id}
+    </select>
+</mapper>

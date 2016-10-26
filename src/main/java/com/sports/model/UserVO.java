@@ -6,7 +6,9 @@ import java.io.Serializable;
  * Created by Gundam on 2016/10/25.
  */
 public class UserVO implements Serializable{
-    private String id;
+    private int id;
+
+    private int age;
 
     private String loginName;
 
@@ -16,23 +18,27 @@ public class UserVO implements Serializable{
 
     private String password;
 
-    private String mail;
+    private String email;
 
-    private String sex;
+    private int sex;
 
-    public String getMail() {
-        return mail;
+    private String imageURL;
+
+    private int authority;
+
+    public String getEmail() {
+        return email;
     }
 
-    public void setMail(String mail) {
-        this.mail = mail;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public String getSex() {
+    public int getSex() {
         return sex;
     }
 
-    public void setSex(String sex) {
+    public void setSex(int sex) {
         this.sex = sex;
     }
 
@@ -54,11 +60,11 @@ public class UserVO implements Serializable{
     }
 
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -78,5 +84,44 @@ public class UserVO implements Serializable{
         this.name = name;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getImageURL() {
+        return imageURL;
+    }
+
+    public void setImageURL(String imageURL) {
+        this.imageURL = imageURL;
+    }
+
+    public int getAuthority() {
+        return authority;
+    }
+
+    public void setAuthority(int authority) {
+        this.authority = authority;
+    }
+
+    @Override
+    public String toString() {
+        return "UserVO{" +
+                "id=" + id +
+                ", age=" + age +
+                ", loginName='" + loginName + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", sex=" + sex +
+                ", imageURL='" + imageURL + '\'' +
+                ", authority=" + authority +
+                '}';
+    }
 }
 
