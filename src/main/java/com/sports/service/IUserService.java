@@ -9,7 +9,7 @@ import com.sun.org.apache.xpath.internal.operations.String;
 public interface IUserService {
     boolean isExist(String loginName);
 
-    UserVO addUser(String loginName, String password);
+    UserVO findUserByPwd(java.lang.String loginName, java.lang.String password);
 
     UserVO findUserByAccount(String loginName);
 

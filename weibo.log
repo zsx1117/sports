@@ -1,0 +1,56 @@
+0    INFO  [2016-11-03 18:18:10]  {dataSource-1} inited
+665  INFO  [2016-11-03 18:18:10]  {dataSource-1} closed
+0    INFO  [2016-11-03 18:20:56]  {dataSource-1} inited
+2220 INFO  [2016-11-03 18:20:59]  UserVO{id=1, age=22, loginName='null', name='DUANYU', phone='null', password='dy123456', email='yu.duan@utt.fr', sex=0, imageURL='null', authority=1}
+2229 INFO  [2016-11-03 18:20:59]  {dataSource-1} closed
+0    INFO  [2016-11-03 19:19:44]  {dataSource-1} inited
+342  INFO  [2016-11-03 19:19:44]  {dataSource-1} closed
+0    INFO  [2016-11-03 19:25:08]  {dataSource-1} inited
+338  INFO  [2016-11-03 19:25:09]  {dataSource-1} closed
+0    INFO  [2016-11-03 19:27:37]  {dataSource-1} inited
+548  INFO  [2016-11-03 19:27:38]  {dataSource-1} closed
+0    INFO  [2016-11-03 19:29:27]  {dataSource-1} inited
+2001 INFO  [2016-11-03 19:29:29]  UserVO{id=1, age=22, loginName='null', name='DUANYU', phone='null', password='dy123456', email='yu.duan@utt.fr', sex=0, imageURL='null', authority=1}
+2014 INFO  [2016-11-03 19:29:29]  {dataSource-1} closed
+0    INFO  [2016-11-03 19:30:24]  {dataSource-1} inited
+1353 INFO  [2016-11-03 19:30:25]  UserVO{id=1, age=22, loginName='null', name='DUANYU', phone='null', password='dy123456', email='yu.duan@utt.fr', sex=0, imageURL='null', authority=1}
+1361 INFO  [2016-11-03 19:30:25]  {dataSource-1} closed
+0    INFO  [2016-11-03 19:46:54]  {dataSource-1} inited
+3162 INFO  [2016-11-03 19:46:57]  UserVO{id=1, age=22, loginName='null', name='DUANYU', phone='null', password='dy123456', email='yu.duan@utt.fr', sex=0, imageURL='null', authority=1}
+3169 INFO  [2016-11-03 19:46:57]  {dataSource-1} closed
+0    INFO  [2016-11-03 19:47:10]  {dataSource-1} inited
+1396 INFO  [2016-11-03 19:47:11]  UserVO{id=1, age=22, loginName='null', name='DUANYU', phone='null', password='dy123456', email='yu.duan@utt.fr', sex=0, imageURL='null', authority=1}
+1405 INFO  [2016-11-03 19:47:11]  {dataSource-1} closed
+0    INFO  [2016-11-03 19:49:23]  {dataSource-1} inited
+1445 INFO  [2016-11-03 19:49:25]  {dataSource-1} closed
+0    INFO  [2016-11-03 19:52:53]  {dataSource-1} inited
+19739 INFO  [2016-11-03 19:53:13]  {dataSource-1} closed
+0    INFO  [2016-11-03 20:06:28]  {dataSource-1} inited
+1934 INFO  [2016-11-03 20:06:30]  UserVO{id=1, age=22, loginName='null', name='DUANYU', phone='null', password='dy123456', email='yu.duan@utt.fr', sex=0, imageURL='null', authority=1}
+1945 INFO  [2016-11-03 20:06:30]  {dataSource-1} closed
+0    INFO  [2016-11-03 20:06:43]  {dataSource-1} inited
+2010 INFO  [2016-11-03 20:06:45]  {dataSource-1} closed
+0    INFO  [2016-11-03 20:25:38]  {dataSource-1} inited
+2015 INFO  [2016-11-03 20:25:40]  UserVO{id=1, age=22, loginName='null', name='DUANYU', phone='null', password='dy123456', email='yu.duan@utt.fr', sex=0, imageURL='null', authority=1}
+2023 INFO  [2016-11-03 20:25:40]  {dataSource-1} closed
+0    INFO  [2016-11-03 20:33:06]  {dataSource-1} inited
+1734 INFO  [2016-11-03 20:33:08]  UserVO{id=2, age=0, loginName='null', name='nihao', phone='null', password='123456', email='null', sex=0, imageURL='null', authority=1}
+1745 INFO  [2016-11-03 20:33:08]  {dataSource-1} closed
+0    INFO  [2016-11-03 20:33:23]  {dataSource-1} inited
+1987 INFO  [2016-11-03 20:33:25]  {dataSource-1} closed
+0    INFO  [2016-11-04 00:34:22]  {dataSource-1} inited
+2154 INFO  [2016-11-04 00:34:24]  {dataSource-1} closed
+0    INFO  [2016-11-04 03:43:22]  {dataSource-1} inited
+2501 INFO  [2016-11-04 03:43:25]  {dataSource-1} closed
+0    INFO  [2016-11-04 03:43:54]  {dataSource-1} inited
+2116 INFO  [2016-11-04 03:43:56]  UserVO{id=2, age=0, loginName='null', name='nihao', phone='null', password='123456', email='null', sex=0, imageURL='null', authority=1}
+2126 INFO  [2016-11-04 03:43:56]  {dataSource-1} closed
+0    INFO  [2016-11-04 03:51:56]  {dataSource-1} inited
+2591 INFO  [2016-11-04 03:51:58]  UserVO{id=2, age=0, loginName='null', name='nihao', phone='null', password='123456', email='null', sex=0, imageURL='null', authority=1}
+2605 INFO  [2016-11-04 03:51:58]  {dataSource-1} closed
+0    INFO  [2016-11-04 04:30:20]  {dataSource-1} inited
+4273 INFO  [2016-11-04 04:30:25]  UserVO{id=1, age=22, loginName='null', name='DUANYU', phone='null', password='dy123456', email='yu.duan@utt.fr', sex=0, imageURL='null', authority=1}
+4287 INFO  [2016-11-04 04:30:25]  {dataSource-1} closed
+0    INFO  [2016-11-04 05:07:07]  {dataSource-1} inited
+2514 INFO  [2016-11-04 05:07:10]  UserVO{id=1, age=22, loginName='null', name='DUANYU', phone='null', password='dy123456', email='yu.duan@utt.fr', sex=0, imageURL='null', authority=1}
+2525 INFO  [2016-11-04 05:07:10]  {dataSource-1} closed

@@ -14,13 +14,36 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(locations = { "classpath:spring.xml","classpath:spring-mybatis.xml" })
 public class TestUserService {
    private static final Logger LOGGER =Logger.getLogger(TestUserService.class);
-
     @Autowired
     private IUserService userService;
 
     @Test
+    public void testQueryByNameAndPassword(){
+        UserVO userInfo = userService.findUserByPwd("nihao","123456");
+        if(userInfo !=null ) {
+            LOGGER.info(userInfo.toString());
+        }
+    }
+
+//    @Test
+//    public void testQueryInsert(){
+//        UserVO userInfo = new UserVO();
+//        userInfo.setName("ZHANG");
+//        userInfo.setPassword("123");
+//        userInfo.setSex(1);
+//        Boolean flag=userService.register(userInfo);
+//        if(flag){
+//            LOGGER.info(userInfo.toString());
+//        }else{
+//            LOGGER.info("failed");
+//        }
+//    }
+
+    @Test
     public void testQueryById1() {
         UserVO userInfo = userService.findUserById(1);
-        LOGGER.info(userInfo.toString());
+        if(userInfo !=null ) {
+            LOGGER.info(userInfo.toString());
+        }
     }
 }

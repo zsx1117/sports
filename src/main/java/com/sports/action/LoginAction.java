@@ -13,6 +13,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 /**
  * Created by Gundam on 2016/10/25.
  */
@@ -31,11 +36,20 @@ public class LoginAction extends BaseController {
     public
     @ResponseBody
     String login(@RequestParam String loginName, String password){
-        if(loginName != null && loginName.equals("admin") && password != null && password.equals("123456") ){
-            return CollectionUtils.getOutCome(SUCCESS,LOGINSUCCESSMESSAGE,EMPTYRESULT);
-        }else{
+        UserVO userInfo = userService.findUserByPwd(loginName,password);
+        if (userInfo!= null){
+            Map<String, String> result= new HashMap<>();
+            result.put("result",GsonUtils.getInstance().toJson(userInfo));
+            return CollectionUtils.getOutCome(SUCCESS,LOGINSUCCESSMESSAGE,result);
+        }
+        else {
             return CollectionUtils.getOutCome(FAILED,LOGINFAILEDMESSAGE,EMPTYRESULT);
         }
+//        if(loginName != null && loginName.equals("admin") && password != null && password.equals("123456") ){
+//            return CollectionUtils.getOutCome(SUCCESS,LOGINSUCCESSMESSAGE,EMPTYRESULT);
+//        }else{
+//            return CollectionUtils.getOutCome(FAILED,LOGINFAILEDMESSAGE,EMPTYRESULT);
+//        }
     }
 
     @RequestMapping(value="/register",method= RequestMethod.POST)
