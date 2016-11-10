@@ -25,19 +25,19 @@ public class TestUserService {
         }
     }
 
-//    @Test
-//    public void testQueryInsert(){
-//        UserVO userInfo = new UserVO();
-//        userInfo.setName("ZHANG");
-//        userInfo.setPassword("123");
-//        userInfo.setSex(1);
-//        Boolean flag=userService.register(userInfo);
-//        if(flag){
-//            LOGGER.info(userInfo.toString());
-//        }else{
-//            LOGGER.info("failed");
-//        }
-//    }
+    @Test
+    public void testQueryInsert(){
+        UserVO userInfo = new UserVO();
+        userInfo.setUser_name("adminZhang");
+        userInfo.setUser_password("12345");
+        userInfo.setUser_authority(200);
+        Boolean flag=userService.register(userInfo);
+        if(flag){
+            LOGGER.info(userInfo.toString());
+        }else{
+            LOGGER.info("failed");
+        }
+    }
 
     @Test
     public void testQueryById1() {

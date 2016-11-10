@@ -15,7 +15,7 @@
 
 
     <insert id="addUser" parameterType="com.sports.pojo.User" useGeneratedKeys="true" keyProperty="id">
-        insert into user_basic (user_name,user_age,user_password,user_email,user_sex,user_imageURL,user_authority) VALUES (#{name},#{age},#{password},#{email},#{sex},#{imageURL},#{authority})
+        insert into user_basic (user_name,user_age,user_password,user_email,user_sex,user_imageURL,user_authority) VALUES (#{user_name},#{user_age},#{user_password},#{user_email},#{user_sex},#{user_imageURL},#{user_authority})
     </insert>
 
     <select id="getUserByPwd" parameterType="map" resultMap="resultUser"
