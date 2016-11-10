@@ -6,121 +6,97 @@ import java.io.Serializable;
  * Created by Gundam on 2016/10/25.
  */
 public class UserVO implements Serializable{
-    private int id;
+    private int user_id;
 
-    private int age;
+    private int user_age;
 
-    private String loginName;
+    private String user_name;
 
-    private String name;
+    private String user_password;
 
-    private String phone;
+    private String user_email;
 
-    private String password;
+    private int user_sex;
 
-    private String email;
+    private String user_imageURL;
 
-    private int sex;
+    private int user_authority;
 
-    private String imageURL;
-
-    private int authority;
-
-    public String getEmail() {
-        return email;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
-    public int getSex() {
-        return sex;
+    public int getUser_age() {
+        return user_age;
     }
 
-    public void setSex(int sex) {
-        this.sex = sex;
+    public void setUser_age(int user_age) {
+        this.user_age = user_age;
     }
 
-
-    public String getPassword() {
-        return password;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getUser_password() {
+        return user_password;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setUser_password(String user_password) {
+        this.user_password = user_password;
     }
 
-
-    public int getId() {
-        return id;
+    public String getUser_email() {
+        return user_email;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUser_email(String user_email) {
+        this.user_email = user_email;
     }
 
-    public String getLoginName() {
-        return loginName;
+    public int getUser_sex() {
+        return user_sex;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
+    public void setUser_sex(int user_sex) {
+        this.user_sex = user_sex;
     }
 
-    public String getName() {
-        return name;
+    public String getUser_imageURL() {
+        return user_imageURL;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUser_imageURL(String user_imageURL) {
+        this.user_imageURL = user_imageURL;
     }
 
-    public int getAge() {
-        return age;
+    public int getUser_authority() {
+        return user_authority;
     }
 
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public String getImageURL() {
-        return imageURL;
-    }
-
-    public void setImageURL(String imageURL) {
-        this.imageURL = imageURL;
-    }
-
-    public int getAuthority() {
-        return authority;
-    }
-
-    public void setAuthority(int authority) {
-        this.authority = authority;
+    public void setUser_authority(int user_authority) {
+        this.user_authority = user_authority;
     }
 
     @Override
     public String toString() {
         return "UserVO{" +
-                "id=" + id +
-                ", age=" + age +
-                ", loginName='" + loginName + '\'' +
-                ", name='" + name + '\'' +
-                ", phone='" + phone + '\'' +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", sex=" + sex +
-                ", imageURL='" + imageURL + '\'' +
-                ", authority=" + authority +
+                "user_id=" + user_id +
+                ", user_age=" + user_age +
+                ", user_name='" + user_name + '\'' +
+                ", user_password='" + user_password + '\'' +
+                ", user_email='" + user_email + '\'' +
+                ", user_sex=" + user_sex +
+                ", user_imageURL='" + user_imageURL + '\'' +
+                ", user_authority=" + user_authority +
                 '}';
     }
 }

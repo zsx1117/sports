@@ -19,7 +19,7 @@ public class TestUserService {
 
     @Test
     public void testQueryByNameAndPassword(){
-        UserVO userInfo = userService.findUserByPwd("nihao","123456");
+        UserVO userInfo = userService.findUserByPwd("admin","12345");
         if(userInfo !=null ) {
             LOGGER.info(userInfo.toString());
         }

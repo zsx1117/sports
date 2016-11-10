@@ -6,90 +6,90 @@ import java.io.Serializable;
  * Created by Gundam on 2016/10/26.
  */
 public class User implements Serializable {
-    private int id;
-    private String name;
-    private int age;
-    private String password;
-    private String email;
-    private int sex;
-    private String imageURL;
-    private int authority;
+    private int user_id;
+    private String user_name;
+    private int user_age;
+    private String user_password;
+    private String user_email;
+    private int user_sex;
+    private String user_imageURL;
+    private int user_authority;
 
-    public int getId() {
-        return id;
+    public int getUser_id() {
+        return user_id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setUser_id(int user_id) {
+        this.user_id = user_id;
     }
 
-    public String getName() {
-        return name;
+    public String getUser_name() {
+        return user_name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUser_name(String user_name) {
+        this.user_name = user_name;
     }
 
-    public int getAge() {
-        return age;
+    public int getUser_age() {
+        return user_age;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setUser_age(int user_age) {
+        this.user_age = user_age;
     }
 
-    public String getPassword() {
-        return password;
+    public String getUser_password() {
+        return user_password;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setUser_password(String user_password) {
+        this.user_password = user_password;
     }
 
-    public String getEmail() {
-        return email;
+    public String getUser_email() {
+        return user_email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setUser_email(String user_email) {
+        this.user_email = user_email;
     }
 
-    public int getSex() {
-        return sex;
+    public int getUser_sex() {
+        return user_sex;
     }
 
-    public void setSex(int sex) {
-        this.sex = sex;
+    public void setUser_sex(int user_sex) {
+        this.user_sex = user_sex;
     }
 
-    public String getImageURL() {
-        return imageURL;
+    public String getUser_imageURL() {
+        return user_imageURL;
     }
 
-    public void setImageURL(String imageURL) {
-        this.imageURL = imageURL;
+    public void setUser_imageURL(String user_imageURL) {
+        this.user_imageURL = user_imageURL;
     }
 
-    public int getAuthority() {
-        return authority;
+    public int getUser_authority() {
+        return user_authority;
     }
 
-    public void setAuthority(int authority) {
-        this.authority = authority;
+    public void setUser_authority(int user_authority) {
+        this.user_authority = user_authority;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", age=" + age +
-                ", password='" + password + '\'' +
-                ", email='" + email + '\'' +
-                ", sex=" + sex +
-                ", imageURL='" + imageURL + '\'' +
-                ", authority=" + authority +
+                "user_id=" + user_id +
+                ", user_name='" + user_name + '\'' +
+                ", user_age=" + user_age +
+                ", user_password='" + user_password + '\'' +
+                ", user_email='" + user_email + '\'' +
+                ", user_sex=" + user_sex +
+                ", user_imageURL='" + user_imageURL + '\'' +
+                ", user_authority=" + user_authority +
                 '}';
     }
 }
