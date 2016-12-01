@@ -1,5 +1,7 @@
 package com.sports.test;
+import com.sports.model.AgendaVO;
 import com.sports.model.UserVO;
+import com.sports.service.IAgendaService;
 import com.sports.service.IUserService;
 import org.apache.log4j.Logger;
 import org.junit.Test;
@@ -16,7 +18,7 @@ public class TestUserService {
    private static final Logger LOGGER =Logger.getLogger(TestUserService.class);
     @Autowired
     private IUserService userService;
-
+   // private IAgendaService agendaService;
     @Test
     public void testQueryByNameAndPassword(){
         UserVO userInfo = userService.findUserByPwd("admin","12345");
@@ -46,4 +48,5 @@ public class TestUserService {
             LOGGER.info(userInfo.toString());
         }
     }
+
 }
