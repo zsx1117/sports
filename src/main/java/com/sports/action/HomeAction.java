@@ -1,6 +1,6 @@
 package com.sports.action;
 
-import com.sports.service.IAgendaService;
+import com.sports.service.IHomeService;
 import com.sports.utils.BaseController;
 import com.sports.utils.CollectionUtils;
 import com.sports.utils.GsonUtils;
@@ -16,25 +16,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Created by qifan on 2016/12/1.
+ * Created by qifan on 2016/12/2.
  */
 @Controller
-@RequestMapping("/agenda")
-public class AgendaAction extends BaseController {
+@RequestMapping("/home")
+public class HomeAction extends BaseController{
     @Autowired
-    @Qualifier("AgendaService")
-    private IAgendaService agendaService;
-
-    public void setAgendaService(IAgendaService agendaService){
-        this.agendaService=agendaService;
-    }
-    @RequestMapping(value = "/getagenda", method = RequestMethod.POST)
+    @Qualifier("HomeService")
+    private IHomeService homeService;
+    private void setHomeService(IHomeService homeService){this.homeService=homeService;}
+    @RequestMapping(value = "/gethomesportevent", method = RequestMethod.POST)
     public
     @ResponseBody
-    String getAgenda(@RequestParam String user_id, String user_event_time, String page_size, String current_page){
+    String getHomeSportEvent(@RequestParam String user_id, String user_like){
         Map<String, String> result = new HashMap<>();
-        result.put("result", GsonUtils.getInstance().toJson(agendaService.getAgenda(user_id, user_event_time,page_size,current_page)));
+        result.put("result", GsonUtils.getInstance().toJson(homeService.getHomeSportEvent(user_id,user_like)));
         return CollectionUtils.getOutCome(SUCCESS, LOGINSUCCESSMESSAGE, result);
     }
-
 }
