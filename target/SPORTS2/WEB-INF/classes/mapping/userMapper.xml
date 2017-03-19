@@ -13,6 +13,13 @@
 
     </resultMap>
 
+    <resultMap type="com.sports.pojo.FriendRequest" id="resultFriendRequest">
+        <id column="user_basic_id" property="user_id" />
+        <id column="user_friend_id" property="user_friend_id"/>
+        <result column="request_message"  property="request_content"/>
+        <result column="request_create_time"  property="request_create_time"/>
+    </resultMap>
+
 
     <insert id="addUser" parameterType="com.sports.pojo.User" useGeneratedKeys="true" keyProperty="id">
         insert into user_basic (user_name,user_age,user_password,user_email,user_sex,user_imageURL,user_authority) VALUES (#{user_name},#{user_age},#{user_password},#{user_email},#{user_sex},#{user_imageURL},#{user_authority})
@@ -28,4 +35,8 @@
             resultType="com.sports.pojo.User">
         select * from user_basic where User_basic_id=#{id}
     </select>
+
+    <insert id="createFriendRequest" parameterType="com.sports.pojo.FriendRequest">
+      INSERT INTO friend_add_request (user_basic_id,user_friend_id,request_message,request_create_time) VALUES (#{user_basic_id},#{user_friend_id},#{request_message},#{request_create_time})
+    </insert>
 </mapper>

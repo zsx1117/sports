@@ -9,4 +9,6 @@ import java.util.List;
  */
 public interface INewsService {
     List<NewsVO> getNews(String user_id,String user_like,String page_size,String current_page);
+
+    int getNewsCount(String user_id);
 }

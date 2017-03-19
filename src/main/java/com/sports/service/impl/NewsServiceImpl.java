@@ -33,4 +33,14 @@ public class NewsServiceImpl implements INewsService{
 
         return list;
     }
+
+    /**
+     * 返回总共有多少条，用于分页
+     * @param user_id
+     * @return
+     */
+    @Override
+    public int getNewsCount(String user_id) {
+        return 67;
+    }
 }

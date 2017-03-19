@@ -1,4 +1,5 @@
 package com.sports.test;
+import com.sports.model.FriendRequestVO;
 import com.sports.model.UserVO;
 import com.sports.service.IUserService;
 import org.apache.log4j.Logger;
@@ -44,6 +45,20 @@ public class TestUserService {
         UserVO userInfo = userService.findUserById(1);
         if(userInfo !=null ) {
             LOGGER.info(userInfo.toString());
+        }
+    }
+
+    @Test
+    public void testQueryInsertFriendRequest(){
+        FriendRequestVO requestVO = new FriendRequestVO();
+        requestVO.setUser_id(1);
+        requestVO.setUser_friend_id(2);
+        requestVO.setRequest_content("add me!!!!");
+        requestVO.setRequest_create_time("2016-11-24 11:11:11");
+        if (userService.createFriendRequests(requestVO)) {
+            LOGGER.info("successed");
+        } else {
+            LOGGER.info("failed");
         }
     }
 }

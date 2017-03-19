@@ -1,7 +1,9 @@
 package com.sports.service;
 
+import com.sports.model.FriendRequestVO;
 import com.sports.model.UserVO;
-import com.sun.org.apache.xpath.internal.operations.String;
+
+import java.util.List;
 
 /**
  * Created by Gundam on 2016/10/25.
@@ -18,4 +20,12 @@ public interface IUserService {
     boolean register(UserVO user);
 
     UserVO findUserById(int Id);
+
+    boolean setUserLikes(String[] likes);
+
+    List<FriendRequestVO> getFriendRequests(String user_id, String page_size, String current_page);
+
+    int getFriendRequestsCount(String user_id);
+
+    boolean createFriendRequests(FriendRequestVO requestVO);
 }

@@ -1,5 +1,6 @@
 package com.sports.Dao;
 
+import com.sports.pojo.FriendRequest;
 import com.sports.pojo.User;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
@@ -15,4 +16,6 @@ public interface UserDao {
     public User getUserByPwd (@Param("userName")String userName,@Param("userPassword")String userPassword );
 
     public int addUser(User user);
+
+    public boolean createFriendRequest(FriendRequest friendRequest);
 }

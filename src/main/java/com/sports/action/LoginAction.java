@@ -1,5 +1,6 @@
 package com.sports.action;
 
+import com.sports.model.FriendRequestVO;
 import com.sports.model.UserVO;
 import com.sports.service.IUserService;
 import com.sports.utils.BaseController;
@@ -32,18 +33,17 @@ public class LoginAction extends BaseController {
         this.userService = userService;
     }
 
-    @RequestMapping(value="/login",method= RequestMethod.POST)
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
     public
     @ResponseBody
-    String login(@RequestParam String loginName, String password){
-        UserVO userInfo = userService.findUserByPwd(loginName,password);
-        if (userInfo!= null){
-            Map<String, String> result= new HashMap<>();
-            result.put("result",GsonUtils.getInstance().toJson(userInfo));
-            return CollectionUtils.getOutCome(SUCCESS,LOGINSUCCESSMESSAGE,result);
-        }
-        else {
-            return CollectionUtils.getOutCome(FAILED,LOGINFAILEDMESSAGE,EMPTYRESULT);
+    String login(@RequestParam String loginName, String password) {
+        UserVO userInfo = userService.findUserByPwd(loginName, password);
+        if (userInfo != null) {
+            Map<String, String> result = new HashMap<>();
+            result.put("result", GsonUtils.getInstance().toJson(userInfo));
+            return CollectionUtils.getOutCome(SUCCESS, LOGINSUCCESSMESSAGE, result);
+        } else {
+            return CollectionUtils.getOutCome(FAILED, LOGINFAILEDMESSAGE, EMPTYRESULT);
         }
 //        if(loginName != null && loginName.equals("admin") && password != null && password.equals("123456") ){
 //            return CollectionUtils.getOutCome(SUCCESS,LOGINSUCCESSMESSAGE,EMPTYRESULT);
@@ -52,22 +52,54 @@ public class LoginAction extends BaseController {
 //        }
     }
 
-    @RequestMapping(value="/register",method= RequestMethod.POST)
+    @RequestMapping(value = "/register", method = RequestMethod.POST)
     public
     @ResponseBody
-    String register(@RequestParam String userJson){
-        UserVO userVO= GsonUtils.getInstance().fromJson(userJson,UserVO.class);
-        if(userService.register(userVO)){
-            return CollectionUtils.getOutCome(SUCCESS,OPERATIONSUCCESSMESSAGE,EMPTYRESULT);
-        }
-        else return CollectionUtils.getOutCome(SUCCESS,OPERATIONFAILEDMESSAGE,EMPTYRESULT);
+    String register(@RequestParam String userJson) {
+        UserVO userVO = GsonUtils.getInstance().fromJson(userJson, UserVO.class);
+        if (userService.register(userVO)) {
+            return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, EMPTYRESULT);
+        } else return CollectionUtils.getOutCome(SUCCESS, OPERATIONFAILEDMESSAGE, EMPTYRESULT);
     }
 
-    @RequestMapping(value="/test")
+    @RequestMapping(value = "/changelike", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    String changeLike(@RequestParam String user_id, String user_like) {
+        String[] likes = user_like.split(",");
+        if (userService.setUserLikes(likes)) {
+            return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, EMPTYRESULT);
+        } else return CollectionUtils.getOutCome(SUCCESS, OPERATIONFAILEDMESSAGE, EMPTYRESULT);
+    }
+
+    @RequestMapping(value = "/getfriendrequests", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    String getFriendRequests(@RequestParam String user_id, String page_size, String current_page) {
+
+        Map<String, String> result = new HashMap<>();
+        result.put("result", GsonUtils.getInstance().toJson(userService.getFriendRequests(user_id, page_size, current_page)));
+        result.put("total_size", String.valueOf(userService.getFriendRequestsCount(user_id)));
+        return CollectionUtils.getOutCome(SUCCESS, LOGINSUCCESSMESSAGE, result);
+
+    }
+
+    @RequestMapping(value = "/addfriend", method = RequestMethod.POST)
+    public
+    @ResponseBody
+    String addFriend(@RequestParam String friend_request) {
+        FriendRequestVO requestVO = GsonUtils.getInstance().fromJson(friend_request, FriendRequestVO.class);
+        if (userService.createFriendRequests(requestVO)) {
+            return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, EMPTYRESULT);
+        } else return CollectionUtils.getOutCome(SUCCESS, OPERATIONFAILEDMESSAGE, EMPTYRESULT);
+    }
+
+
+    @RequestMapping(value = "/test")
     public
     @ResponseBody
     String test() {
-        String result = CollectionUtils.getOutCome(SUCCESS,LOGINSUCCESSMESSAGE,EMPTYRESULT);
+        String result = CollectionUtils.getOutCome(SUCCESS, LOGINSUCCESSMESSAGE, EMPTYRESULT);
         return result;
     }
 }
