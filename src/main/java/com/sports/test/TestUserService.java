@@ -1,4 +1,5 @@
 package com.sports.test;
+import com.sports.model.FriendRequestVO;
 import com.sports.model.UserVO;
 import com.sports.service.IUserService;
 import org.apache.log4j.Logger;
