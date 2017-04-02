@@ -20,11 +20,11 @@ public class AgendaServiceImpl implements IAgendaService {
         int pageSize = Integer.valueOf(page_size);
         for (int i=0;i<pageSize;i++){
             AgendaVO item=new AgendaVO();
-            item.setUser_name("Username");
-            item.setUser_events_time("12:00");
-            item.setUser_events_place("UTT");
-            item.setUser_events_name("basketball");
-            item.setEvents_Progress(String.valueOf(i*10));
+            item.setUserName("Username");
+            item.setUserEventsTime("12:00");
+            item.setUserEventsPlace("UTT");
+            item.setUserEventsName("basketball");
+            item.setEventsProgress(String.valueOf(i*10));
             list.add(item);
         }
         return list;
