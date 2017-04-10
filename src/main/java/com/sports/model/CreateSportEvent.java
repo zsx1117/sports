@@ -10,6 +10,7 @@ public class CreateSportEvent {
     private int event_participer_number;
     private String event_description;
     private String event_sport_type;
+    private String event_start_time;
     private int user_basic_id;
 
     public String getEvent_sport() {
@@ -58,5 +59,13 @@ public class CreateSportEvent {
 
     public void setUser_basic_id(int user_basic_id) {
         this.user_basic_id = user_basic_id;
+    }
+
+    public String getEvent_start_time() {
+        return event_start_time;
+    }
+
+    public void setEvent_start_time(String event_start_time) {
+        this.event_start_time = event_start_time;
     }
 }

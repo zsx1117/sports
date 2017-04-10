@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface SportEventDao {
-    public boolean createSportEvent(SportEvent sportEvent);
+    public int createSportEvent(SportEvent sportEvent);
 }
