@@ -33,9 +33,9 @@ public class SportEventsAction extends BaseController {
         createSportEvent.setUser_basic_id(Integer.valueOf(user_id));
 
         if (sportEventService.createSportEvent(createSportEvent)) {
-            return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, null);
+            return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, EMPTYRESULT);
         } else {
-            return CollectionUtils.getOutCome(FAILED, OPERATIONFAILEDMESSAGE, null);
+            return CollectionUtils.getOutCome(FAILED, OPERATIONFAILEDMESSAGE, EMPTYRESULT);
         }
 
 
