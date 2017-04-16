@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sports.Dao.SportEventDao">
+    <resultMap type="com.sports.pojo.SportEvent" id="resultSportEvent">
+        <id column="event_id" property="event_id"/>
+        <result column="event_create_time" property="event_create_time"/>
+        <result column="event_end_time" property="event_end_time"/>
+        <result column="event_start_time" property="event_start_time"/>
+        <result column="event_sport" property="event_sport"/>
+        <result column="event_location" property="event_location"/>
+        <result column="event_participer_number" property="event_participer_number"/>
+        <result column="event_description" property="event_description"/>
+        <result column="event_sport_type" property="event_sport_type"/>
+        <result column="event_participer" property="event_participer"/>
+        <result column="event_done" property="event_done"/>
+        <result column="user_basic_id" property="user_basic_id"/>
+    </resultMap>
+
+    <insert id="createSportEvent" parameterType="com.sports.pojo.SportEvent" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO event
+        (user_basic_id,event_create_time,event_start_time,event_sport,event_location,event_participer_number,event_description,event_sport_type,event_done)
+        VALUES
+        (#{user_basic_id},#{event_create_time},#{event_start_time},#{event_sport},#{event_location},#{event_participer_number},#{event_description},#{event_sport_type},#{event_done})
+    </insert>
+
+</mapper>
