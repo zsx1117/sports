@@ -23,4 +23,10 @@
         (#{user_basic_id},#{event_create_time},#{event_start_time},#{event_sport},#{event_location},#{event_participer_number},#{event_description},#{event_sport_type},#{event_done})
     </insert>
 
+    <select id="getSportEventsByType"
+            resultMap="resultSportEvent"
+            resultType="com.sports.pojo.SportEvent">
+        select * from event where event_sport_type=#{event_sport_type}
+    </select>
+
 </mapper>

@@ -1,6 +1,7 @@
 package com.sports.action;
 
 import com.sports.service.IHomeService;
+import com.sports.service.ISportEventService;
 import com.sports.utils.BaseController;
 import com.sports.utils.CollectionUtils;
 import com.sports.utils.GsonUtils;
@@ -24,13 +25,21 @@ public class HomeAction extends BaseController{
     @Autowired
     @Qualifier("HomeService")
     private IHomeService homeService;
+
     private void setHomeService(IHomeService homeService){this.homeService=homeService;}
+
+    @Autowired
+    @Qualifier("sportsEventService")
+    ISportEventService sportEventService;
+
+
     @RequestMapping(value = "/gethomesportevent", method = RequestMethod.POST)
     public
     @ResponseBody
-    String getHomeSportEvent(@RequestParam String user_id, String user_like){
+    String getHomeSportEvent(@RequestParam String user_like) {
         Map<String, String> result = new HashMap<>();
-        result.put("result", GsonUtils.getInstance().toJson(homeService.getHomeSportEvent(user_id,user_like)));
+
+        result.put("result", GsonUtils.getInstance().toJson(sportEventService.getSportEventsByType(user_like)));
         return CollectionUtils.getOutCome(SUCCESS, LOGINSUCCESSMESSAGE, result);
     }
 }
