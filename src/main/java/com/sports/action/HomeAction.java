@@ -33,13 +33,13 @@ public class HomeAction extends BaseController{
     ISportEventService sportEventService;
 
 
-    @RequestMapping(value = "/gethomesportevent", method = RequestMethod.POST)
+    @RequestMapping(value = "/sportevents", method = RequestMethod.GET)
     public
     @ResponseBody
-    String getHomeSportEvent(@RequestParam String user_like) {
+    String getHomeSportEvent(@RequestParam("user_like") String user_like) {
         Map<String, String> result = new HashMap<>();
 
         result.put("result", GsonUtils.getInstance().toJson(sportEventService.getSportEventsByType(user_like)));
-        return CollectionUtils.getOutCome(SUCCESS, LOGINSUCCESSMESSAGE, result);
+        return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, result);
     }
 }
