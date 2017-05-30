@@ -39,7 +39,7 @@ public class LoginAction extends BaseController {
     String login(@RequestParam String loginName, String password) {
         UserVO userInfo = userService.findUserByPwd(loginName, password);
         if (userInfo != null) {
-            Map<String, String> result = new HashMap<>();
+            Map<String, Object> result = new HashMap<>();
             result.put("result", GsonUtils.getInstance().toJson(userInfo));
             return CollectionUtils.getOutCome(SUCCESS, LOGINSUCCESSMESSAGE, result);
         } else {
@@ -77,7 +77,7 @@ public class LoginAction extends BaseController {
     @ResponseBody
     String getFriendRequests(@RequestParam String user_id, String page_size, String current_page) {
 
-        Map<String, String> result = new HashMap<>();
+        Map<String, Object> result = new HashMap<>();
         result.put("result", GsonUtils.getInstance().toJson(userService.getFriendRequests(user_id, page_size, current_page)));
         result.put("total_size", String.valueOf(userService.getFriendRequestsCount(user_id)));
         return CollectionUtils.getOutCome(SUCCESS, LOGINSUCCESSMESSAGE, result);

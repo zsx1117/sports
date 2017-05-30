@@ -36,7 +36,7 @@ public class NewsAction extends BaseController {
     @ResponseBody
     String getArticles(@RequestParam String user_id, String user_like, String page_size, String current_page) {
 
-        Map<String, String> result = new HashMap<>();
+        Map<String, Object> result = new HashMap<>();
         result.put("result", GsonUtils.getInstance().toJson(newsService.getNews(user_id, user_like, page_size, current_page)));
         result.put("total_size", String.valueOf(newsService.getNewsCount(user_id)));
         return CollectionUtils.getOutCome(SUCCESS, LOGINSUCCESSMESSAGE, result);

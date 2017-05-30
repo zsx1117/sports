@@ -32,7 +32,7 @@ public class AgendaAction extends BaseController {
     public
     @ResponseBody
     String getAgenda(@RequestParam String user_id, String user_event_time, String page_size, String current_page){
-        Map<String, String> result = new HashMap<>();
+        Map<String, Object> result = new HashMap<>();
         result.put("result", GsonUtils.getInstance().toJson(agendaService.getAgenda(user_id, user_event_time,page_size,current_page)));
         return CollectionUtils.getOutCome(SUCCESS, LOGINSUCCESSMESSAGE, result);
     }
