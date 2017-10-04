@@ -52,12 +52,14 @@ public class LoginAction extends BaseController {
 //        }
     }
 
-    @RequestMapping(value = "/checkuserexisted;", method = RequestMethod.GET)
+    @RequestMapping(value = "/checkuserexisted", method = RequestMethod.GET)
+    public
+    @ResponseBody
     String checkUserNameExisted(@RequestParam("userName") String userName){
         if (userService.isExist(userName)) {
-            return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, EMPTYRESULT);
+            return CollectionUtils.getOutCome(FAILED, USER_EXISTED_MESSAGE, EMPTYRESULT);
         } else {
-            return CollectionUtils.getOutCome(FAILED, OPERATIONFAILEDMESSAGE, EMPTYRESULT);
+            return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, EMPTYRESULT);
         }
     }
 

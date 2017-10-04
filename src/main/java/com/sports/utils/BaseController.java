@@ -17,4 +17,6 @@ public class BaseController {
     public static final Map<String, String> EMPTYRESULT = Collections.unmodifiableMap(makeMap("result", ""));
     public static final Map<String, String> OPERATIONFAILEDMESSAGE = Collections.unmodifiableMap(makeMap("message", "操作失败"));
     public static final Map<String, String> OPERATIONSUCCESSMESSAGE = Collections.unmodifiableMap(makeMap("message", "操作成功"));
+    public static final Map<String, String> USER_EXISTED_MESSAGE = Collections.unmodifiableMap(makeMap("message", "该用户已存在"));
+
 }
