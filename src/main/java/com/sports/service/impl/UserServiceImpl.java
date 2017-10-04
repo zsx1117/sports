@@ -23,7 +23,7 @@ public class UserServiceImpl implements com.sports.service.IUserService {
 
     @Override
     public boolean isExist(String loginName) {
-        return false;
+        return userDao.checkUserExisted(loginName) > 0;
     }
 
     @Override
@@ -96,6 +96,7 @@ public class UserServiceImpl implements com.sports.service.IUserService {
 
     /**
      * 返回总共有多少条好友请求，用于分页
+     *
      * @param user_id
      * @return
      */
@@ -106,6 +107,7 @@ public class UserServiceImpl implements com.sports.service.IUserService {
 
     /**
      * 创建新的好友请求
+     *
      * @param requestVO
      * @return
      */
@@ -113,7 +115,7 @@ public class UserServiceImpl implements com.sports.service.IUserService {
     public boolean createFriendRequests(FriendRequestVO requestVO) {
         if (requestVO != null) {
             FriendRequest friendRequest = new FriendRequest();
-            BeanUtils.copyProperties(requestVO,friendRequest);
+            BeanUtils.copyProperties(requestVO, friendRequest);
             return userDao.createFriendRequest(friendRequest);
         }
         return false;

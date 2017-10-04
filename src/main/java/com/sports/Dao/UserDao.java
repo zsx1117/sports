@@ -15,6 +15,8 @@ public interface UserDao {
 
     public User getUserByPwd (@Param("userName")String userName,@Param("userPassword")String userPassword );
 
+    public int checkUserExisted(@Param("userName")String userName);
+
     public int addUser(User user);
 
     public boolean createFriendRequest(FriendRequest friendRequest);

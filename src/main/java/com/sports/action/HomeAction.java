@@ -37,9 +37,9 @@ public class HomeAction extends BaseController{
     public
     @ResponseBody
     String getHomeSportEvent(@RequestParam("user_like") String user_like) {
-        Map<String, String> result = new HashMap<>();
+        Map<String, Object> result = new HashMap<>();
 
-        result.put("result", GsonUtils.getInstance().toJson(sportEventService.getSportEventsByType(user_like)));
-        return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, result);
+        result.put("result", sportEventService.getSportEventsByType(user_like));
+        return CollectionUtils.getOutComeObject(SUCCESS, OPERATIONSUCCESSMESSAGE, result);
     }
 }

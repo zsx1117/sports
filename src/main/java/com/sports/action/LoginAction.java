@@ -52,13 +52,24 @@ public class LoginAction extends BaseController {
 //        }
     }
 
+    @RequestMapping(value = "/checkuserexisted;", method = RequestMethod.GET)
+    String checkUserNameExisted(@RequestParam("userName") String userName){
+        if (userService.isExist(userName)) {
+            return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, EMPTYRESULT);
+        } else {
+            return CollectionUtils.getOutCome(FAILED, OPERATIONFAILEDMESSAGE, EMPTYRESULT);
+        }
+    }
+
     @RequestMapping(value = "/register", method = RequestMethod.POST)
     public
     @ResponseBody
     String register(@RequestParam String userJson) {
         UserVO userVO = GsonUtils.getInstance().fromJson(userJson, UserVO.class);
         if (userService.register(userVO)) {
-            return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, EMPTYRESULT);
+            Map<String, String> result = new HashMap<>();
+            result.put("result", GsonUtils.getInstance().toJson(userVO));
+            return CollectionUtils.getOutCome(SUCCESS, OPERATIONSUCCESSMESSAGE, result);
         } else return CollectionUtils.getOutCome(SUCCESS, OPERATIONFAILEDMESSAGE, EMPTYRESULT);
     }
 

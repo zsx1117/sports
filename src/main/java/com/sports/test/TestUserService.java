@@ -61,4 +61,21 @@ public class TestUserService {
             LOGGER.info("failed");
         }
     }
+
+    @Test
+    public void testCheckUserExisted() {
+        String userName = "admin";
+        if (userService.isExist(userName)) {
+            LOGGER.info(userName + "existed");
+        } else {
+            LOGGER.info(userName + "not existed");
+        }
+
+        userName = "xxoo";
+        if (userService.isExist(userName)) {
+            LOGGER.info(userName + " existed");
+        } else {
+            LOGGER.info(userName + " not existed");
+        }
+    }
 }

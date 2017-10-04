@@ -20,6 +20,10 @@
         <result column="request_create_time"  property="request_create_time"/>
     </resultMap>
 
+    <select id="checkUserExisted" parameterType="map" resultType="java.lang.Integer">
+       select count(user_name) from user_basic where User_name=#{userName}
+    </select>
+
 
     <insert id="addUser" parameterType="com.sports.pojo.User" useGeneratedKeys="true" keyProperty="id">
         insert into user_basic (user_name,user_age,user_password,user_email,user_sex,user_imageURL,user_authority) VALUES (#{user_name},#{user_age},#{user_password},#{user_email},#{user_sex},#{user_imageURL},#{user_authority})

@@ -103,11 +103,11 @@ public class CollectionUtils {
         return GsonUtils.getInstance().toJson(map);
     }
 
-//    public static String getOutComeObject (Map<String,String> code,Map<String,String> message, Map<String,Object> result){
-//        Map map = new HashMap<>();
-//        map.putAll(code);
-//        map.putAll(message);
-//        map.putAll(result);
-//        return GsonUtils.getInstance().toJson(map);
-//    }
+    public static String getOutComeObject (Map<String,String> code,Map<String,String> message, Map<String,Object> result){
+        Map map = new HashMap<>();
+        map.putAll(code);
+        map.putAll(message);
+        map.putAll(result);
+        return GsonUtils.getInstance().toJson(map);
+    }
 }
